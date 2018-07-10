@@ -12,11 +12,11 @@ describe 'Visitor' do
     state = "CO"
     zip = 80301
 
-    fill_in :description, with: description
-    fill_in :street, with: street
-    fill_in :city, with: city
-    fill_in :state, with: state
-    fill_in :zip, with: zip
+    fill_in :address_description, with: description
+    fill_in :address_street, with: street
+    fill_in :address_city, with: city
+    fill_in :address_state, with: state
+    fill_in :address_zip, with: zip
     click_on("Create Address")
 
     expect(current_path).to eq(student_path(student))
