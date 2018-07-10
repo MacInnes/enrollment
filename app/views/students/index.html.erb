@@ -1,3 +1,6 @@
 <%= @students.each do |student| %>
-  <%= student.name %>
+  <div id="student-<%= student.id %>">
+    <%= student.name %>
+    <%= link_to "Delete", student_path(student), method: 'delete' %>
+  </div>
 <% end %>
