@@ -9,4 +9,8 @@ describe Address, type: :model do
     it {should validate_presence_of(:zip)}
     it {should validate_presence_of(:student_id)}
   end
+
+  describe 'Relationships' do
+    it {should belong_to(:student)}
+  end
 end
